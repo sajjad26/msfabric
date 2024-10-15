@@ -29,5 +29,32 @@
       "mode": "production"
     }
   },
-  "entities": {}
+  "entities": {
+    "AdventureWorks": {
+      "source": {
+        "object": "AdventureWorks.*",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "AdventureWorks",
+          "plural": "AdventureWorks"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    }
+  }
 }
